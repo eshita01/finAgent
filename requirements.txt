@@ -1,0 +1,12 @@
+langgraph
+langchain
+google-generativeai
+yfinance
+requests
+pandas
+python-dotenv
+pyyaml
+tqdm
+scikit-learn
+matplotlib
+pytest
