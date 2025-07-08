@@ -16,7 +16,14 @@ class GeminiLLM:
     def generate(self, prompt: str, **kwargs) -> str:
         try:
             response = self.model.generate_content(prompt, **kwargs)
-            return response.text.strip() if response.text else ""
+            if kwargs.get("stream"):
+                collected = []
+                for chunk in response:
+                    text = getattr(chunk, "text", "")
+                    if text:
+                        collected.append(text)
+                return "".join(collected).strip()
+            return response.text.strip() if getattr(response, "text", None) else ""
         except Exception as e:
             print(f"[GeminiLLM] Error generating response: {e}")
             return "LLM_ERROR"
