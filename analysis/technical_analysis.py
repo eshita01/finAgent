@@ -1,4 +1,4 @@
-# data_sources/technical_analysis.py
+# analysis/technical_analysis.py
 
 """Basic technical indicator calculations using pandas."""
 
