@@ -8,6 +8,7 @@ from data_sources.stock_data_fetcher import StockDataFetcher
 from analysis.technical_analysis import TechnicalAnalysis
 
 
+
 class TechnicalAnalysisNode:
     """Fetch data for a ticker and compute technical indicators."""
 
