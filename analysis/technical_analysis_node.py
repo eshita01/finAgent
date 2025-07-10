@@ -5,7 +5,8 @@ from typing import Dict, Optional
 import pandas as pd
 
 from data_sources.stock_data_fetcher import StockDataFetcher
-from data_sources.technical_analysis import TechnicalAnalysis
+from analysis.technical_analysis import TechnicalAnalysis
+
 
 
 class TechnicalAnalysisNode:
